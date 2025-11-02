@@ -44,6 +44,41 @@ const myFunction=function(){
 console.log(typeof heros);//object
 console.log(typeof myObj);//object
 console.log(typeof myFunction);// function
-
 console.log(typeof bigNumber);//bigint
+
+//++++++++++++++++++++++++memory+++++++++++++++++++++++++++++
+//primitive datatype is stored in Stack and Non-primitive is in heap
+// in stack, copy of declard variable milta h
+//in heap, ref of orginial val milta hai, eg has shown
+
+let myYoutubename="hiteshdotcom"
+let anothername=myYoutubename
+anothername="chaiaurcode"// all these stored in stack
+console.log(myYoutubename);//hiteshdotcom b/c we get copy
+console.log(anothername);//chaiaurcode 
+
+let userOne={
+    email:"user@google.com",
+    upi:"user@ybl"
+}// all these stored in heap
+
+let userTwo=userOne
+userTwo.email="hitesh@google.com"
+console.log(userOne.email)// hitesh@google.com
+console.log(userTwo.email)// hitesh@google.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
