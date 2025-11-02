@@ -8,7 +8,9 @@ let nam="hitesh"
 let age=18
 let isloggedIn=false
 
-// primitive datatypes are:
+// js is dynamically typed lang not static typed
+// non primitve of reference: Array, Object, Functions
+// primitive datatypes are: string ,number, null ,bollean,undefined, Symbol,BigInt
 //number datatype range is 2 to power 53
 //bigint datatye for large no.s
 //string datatype is in "" and ''
@@ -17,15 +19,31 @@ let isloggedIn=false
 //undefined => 
 // symbol => used for uniqness
 
+const id=Symbol('123')
+const anotherid=Symbol('123')
+console.log(id===anotherid);//f b/c Symbol gives unique val
+
+const bigNumber=3456677788899999n
 //object
 console.log(typeof nam);
 console.log(typeof null); //so null is an object b/c its type is object in js
 console.log(typeof undefined);// it is a type in js
 
+// non primitve of reference: Array, Object, Functions...all these
+//  non primitive datatye is function
+const heros=["shatkiman", "naagraj","doga"]
+let myObj={
+    name:"hitesh",
+    age:22,
+}
 
+const myFunction=function(){
+    console.log("Hello World");
+    
+}
+console.log(typeof heros);//object
+console.log(typeof myObj);//object
+console.log(typeof myFunction);// function
 
-
-
-
-
+console.log(typeof bigNumber);//bigint
 
