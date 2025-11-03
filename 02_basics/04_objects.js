@@ -61,7 +61,18 @@ const course={
 }
 //course.courseInstructer...but code will not be clean
 const{courseInstructer: instructor}=course
-console.log(courseInstructer); //hitesh.if courseInstructor is a big name..give it as your choice name Instructor
+///console.log(courseInstructer); //hitesh.if courseInstructor is a big name..give it as per your choice name Instructor, Called Destructure
 console.log(instructor);//hitesh
 
 
+// {
+//     "name":"hitesh",
+//     "coursename":"js in hindi",
+//     "price:"free"
+// }
+
+[
+    {},
+    {},
+    {}
+]
