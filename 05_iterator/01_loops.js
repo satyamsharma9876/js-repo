@@ -41,8 +41,6 @@ const myObj={
 }
 for (const [key,value] of myObj) {
         console.log(key,':-', value);
-
 }
-
-
+// for of not work for obj..to apply loop on it goin for.js
 
