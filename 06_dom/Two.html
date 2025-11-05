@@ -8,6 +8,7 @@
 </head>
 <body style="background-color: #212121; color: #fff;">
     <div class="parent">
+        <!-- ghjh -->
         <div class="day">monday</div>
         <div class="day">tuesday</div>
         <div class="day">wednesday</div>
@@ -19,7 +20,7 @@
     console.log(parent);
     console.log(parent.children);// HTMLCollection(4) [div.day, div.day, div.day, div.day]
     // htmlcoll is a array like ele
-    console.log(parent.children[1]);//<div class="day">tuesday</div>
+    console.log(parent.children[1]);//<div class="day" style="color: orange;">tuesday</div>
     console.log(parent.children[1].innerHTML);//tuesday
 
     for (let i = 0; i < parent.children.length; i++) {
