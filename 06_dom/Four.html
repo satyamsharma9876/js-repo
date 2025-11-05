@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121;color:#fff">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li')
+        li.innerText=`${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")// calling fn
+    addLanguage("typescript")// calling fn..but fn has to traverse whole tree again & again
+
+    function addOptilang(langName){
+        const li= document.createElement('li')
+        // const addText = document.createTextNode(langName)
+        // li.appendChild(addText)
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptilang("golang")//calling fn..optimised way
+
+    //lets edit any value
+    const secondlang = document.querySelector("li:nth-child(2)")
+    console.log(secondlang);
+
+    //secondlang.innerHTML="Mojo"// but it is not optimized
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondlang.replaceWith(newli)
+
+    //edit
+    const firstlang=document.querySelector("li:first-child")
+    firstlang.outerHTML='<li>Typescript</li>'
+    //edit-remove
+    const lastlang=document.querySelector('li:last-child')
+    lastlang.remove()
+</script>
+</html>

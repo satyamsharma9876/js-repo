@@ -12,9 +12,16 @@
    const div = document.createElement('div')
     console.log(div);//<div></div>
     div.className = "main"// now class is added to div
-    // div.id = "myId"
+    // div.id = "myId" //now id is added to div..but adding by using math library
+   // div.id=Math.random()// now id is in decimal ..but leys round off it for integer val
     div.id = Math.round(Math.random() * 10 +1)// now id is added to div
     div.setAttribute("title", "generated title") //now title is added to div
+    div.style.backgroundColor="green"
+    div.style.padding="12px"
+    div.innerText="chai aur code"
+    const addText = document.createTextNode("chai aur code")
+    div.appendChild(addText)
+    document.body.appendChild(div)
 </script>
 </html>
 
