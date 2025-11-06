@@ -6,21 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Chai aur jvascript</h1>
+    <h1>Chai aur javascript</h1>
     <button id ="start">Start</button>
-    <button id ="dtop">Stop</button>
+    <button id ="stop">Stop</button>
 </body>
 <script>
     // setInterval(function(){
     //     console.log("hitesh", Date.now());  
     // },1000)// by passing ref
 
-    const myfun=function(str){// i there is no argument str then no problem
+    const myfun=function(str){//here is parametr to catch "hi". if there is no "hi" then no need of parameter
       console.log(str, Date.now());      
     }
-    const clearId = setInterval(myfun,1000, "hi")
-    clearInterval(clearId)
+    // const clearId = setInterval(myfun,1000, "hi")
+    //clearInterval(clearId) // b/c it cleared whole o/p, so design likeif i click on start it gets start and fo stop it clreaed whole o/p
+     let clearid
+    document.querySelector('#start').addEventListener('click',function(){
+       clearId = setInterval(myfun,1000, "hi")
+    })
 
-    document.querySelector()
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(clearId) 
+    })
 </script>
 </html>
