@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style ="background-color: #414141; color :aliceblue;">
+    <h2>Amazing images</h2>
+    <ul id ="images">
+        <li><img width ="200px" height ="200px" id="phototshop" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt=""></li>  
+        <li><img width ="200px" height ="200px" id="japan" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt=""></li>  
+        <li><img width ="200px" height ="200px" id="river" src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade" alt=""></li>  
+        <li><img width ="200px" height ="200px" id="owl" src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt=""></li>  
+        <li><img width ="200px" height ="200px" id="prayer" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt=""></li>  
+         <li><a style ="color:aliceblue;" href="https://google.com" id ="google">Google</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }// b/c this approach is not good & this does not give more info or more feature & eventlistenrs gives more info & abitility of propogation
+//    document.getElementById('owl').addEventListener('click', function(e){
+//     console.log(e);
+    
+//     //alert("owl clicked again")
+//    },false)// here false is default
+   //to study...first is type eg= keyboad events, mouse events
+   // 2nd...timestamp eg date,time, activities kaise change krte hai
+   //3rd.. default prevented ..def bhaviour of any tag is prevented by it
+   // target,toElement,srcElement,currentTarget,
+   //client position related eg clintX,clientY, screenx,screeny,
+   // altkey,ctrkey,shiftkey, keyCode
+
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // },false)// is there is false then on cliking owl 1st of all "owl cliked" & then "clicked inside the ul" printed, it is called bbbuling format but in true reverse happen 
+    //        // on appling stoppropagation no more things gets printed
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log(" owl clicked");
+    //     e.stopPropagation()
+    // },false)
+    // // on cliciking Google below images it opens google website so to stop it use preventDefault 
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+        
+    // },false)
+
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        //console.log(e.target.parentNode);// from target source of img is selected and from parentnode li is selected or parentnode is for accessing parent
+
+        let removeIt=e.target.parentNode
+        removeIt.remove();// also there is one more method
+        //removeIt.parentNode.removeChild(removeIt)
+// but by this method if i click on just below img then whole img disappear so use tagname  
+        console.log(e.target.tagName);// give tag like IMG,LI,etc on clicking imges,lsit Items,etc respectively
+        if(e.target.tagName=='IMG'){
+           console.log(e.target.id);// id of img also get printed
+           let removeIt=e.target.parentNode
+           removeIt.remove();
+        }
+    },false)
+</script>
+</html>
