@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur jvascript</h1>
+    <button id ="start">Start</button>
+    <button id ="dtop">Stop</button>
+</body>
+<script>
+    // setInterval(function(){
+    //     console.log("hitesh", Date.now());  
+    // },1000)// by passing ref
+
+    const myfun=function(str){// i there is no argument str then no problem
+      console.log(str, Date.now());      
+    }
+    const clearId = setInterval(myfun,1000, "hi")
+    clearInterval(clearId)
+
+    document.querySelector()
+</script>
+</html>
