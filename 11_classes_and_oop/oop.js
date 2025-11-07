@@ -43,22 +43,5 @@ console.log(userTwo);// User { username: 'ChaiAurCode', loginCount: 11, islogged
 // step3= all arguments inject/added into this keword
 // step4= we get in fom of fn
 
-console.log(userOne.constructor)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(userOne.constructor)//[Function: User]
 
